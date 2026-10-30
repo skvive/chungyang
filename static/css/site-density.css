@@ -129,7 +129,45 @@
 }
 
 .contact-form label {
-  margin: 10px 0 6px;
+  margin: 8px 0 4px;
+  font-size: 12px;
+}
+
+.contact-form input:not([type="checkbox"]),
+.contact-form select,
+.contact-form textarea {
+  padding: 8px 12px;
+  margin-top: 4px;
+  font-size: 14px;
+  line-height: 1.45;
+  border-radius: 8px;
+  min-height: 0;
+}
+
+.contact-form textarea {
+  min-height: 112px;
+  max-height: 280px;
+}
+
+.contact-form .form-two {
+  gap: 12px;
+}
+
+.contact-form .consent {
+  margin-top: 12px;
+  font-size: 11px;
+  line-height: 1.65;
+}
+
+.contact-form .btn-wide {
+  margin-top: 14px;
+  padding: 10px 16px;
+}
+
+.contact-form .success {
+  padding: 12px 14px;
+  margin-bottom: 12px;
+  font-size: 13px;
 }
 
 .contact-grid {

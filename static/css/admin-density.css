@@ -1,0 +1,362 @@
+/**
+ * Admin hub — compact density (matches public site-density)
+ */
+:root {
+  --admin-sidebar: 212px;
+  --admin-pad: 22px;
+  --admin-field-y: 7px;
+  --admin-field-x: 11px;
+}
+
+.admin-layout {
+  grid-template-columns: var(--admin-sidebar) minmax(0, 1fr);
+}
+
+.sidebar {
+  padding: 18px 10px;
+}
+
+.admin-logo {
+  padding: 0 10px 18px;
+  gap: 10px;
+}
+
+.admin-logo > span {
+  font-size: 28px;
+}
+
+.admin-logo strong {
+  font-size: 17px;
+}
+
+.sidebar-label {
+  margin: 14px 9px 6px;
+  font-size: 9px;
+}
+
+.side-link {
+  padding: 8px 11px;
+  gap: 10px;
+  font-size: 12px;
+  border-radius: 8px;
+}
+
+.sidebar-foot {
+  padding: 16px 10px 0;
+  font-size: 11px;
+}
+
+.admin-top {
+  height: 56px;
+  padding: 0 22px;
+}
+
+.admin-top strong {
+  font-size: 16px;
+}
+
+.admin-profile {
+  padding: 5px 11px;
+  font-size: 12px;
+  margin-left: 10px;
+}
+
+.admin-content {
+  padding: var(--admin-pad);
+  min-height: calc(100vh - 108px);
+}
+
+.admin-footer {
+  padding: 10px var(--admin-pad);
+  font-size: 10px;
+}
+
+.admin-pagehead {
+  margin-bottom: 18px;
+  gap: 16px;
+}
+
+.admin-pagehead h1 {
+  font-size: 22px;
+  margin: 2px 0;
+}
+
+.admin-pagehead p {
+  font-size: 12px;
+}
+
+.admin-btn {
+  padding: 8px 14px;
+  font-size: 12px;
+  border-radius: 8px;
+  font-weight: 700;
+}
+
+.stat-grid {
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.stat-card {
+  padding: 16px 18px;
+  border-radius: 12px;
+}
+
+.stat-card > strong {
+  font-size: 28px;
+  line-height: 1.35;
+}
+
+.stat-ico {
+  right: 12px;
+  top: 12px;
+  padding: 6px 9px;
+  font-size: 16px;
+}
+
+.admin-panels {
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.panel {
+  padding: 16px 18px;
+  margin-bottom: 14px;
+  border-radius: 12px;
+}
+
+.panel-heading {
+  margin-bottom: 14px;
+}
+
+.panel-heading h2 {
+  font-size: 15px;
+}
+
+.module-grid {
+  gap: 8px;
+}
+
+.module-grid a {
+  padding: 12px 8px;
+  border-radius: 9px;
+}
+
+.module-grid span {
+  font-size: 20px;
+}
+
+.module-grid strong {
+  margin-top: 6px;
+  font-size: 12px;
+}
+
+table {
+  font-size: 11px;
+}
+
+th {
+  padding: 9px 10px;
+}
+
+td {
+  padding: 10px 10px;
+}
+
+.chip {
+  padding: 3px 7px;
+  font-size: 10px;
+}
+
+.small-btn {
+  padding: 4px 8px;
+  font-size: 10px;
+}
+
+.metrics-strip div {
+  padding: 10px;
+  min-width: 72px;
+}
+
+.metrics-strip strong {
+  font-size: 17px;
+}
+
+.edit-grid {
+  gap: 14px;
+}
+
+.edit-field {
+  font-size: 12px;
+}
+
+.edit-field span {
+  margin-bottom: 5px;
+}
+
+.edit-field input,
+.edit-field textarea,
+.edit-field select,
+.lead-editor input,
+.lead-editor select,
+.media-form input,
+.media-form select,
+.inline-form input,
+.task-create-form input,
+.task-create-form select,
+.task-create-form textarea {
+  padding: var(--admin-field-y) var(--admin-field-x);
+  border-radius: 7px;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.edit-field textarea,
+.task-create-form textarea {
+  min-height: 72px;
+  line-height: 1.55;
+}
+
+.form-actions {
+  margin-top: 16px;
+  gap: 8px;
+}
+
+.lead-card {
+  margin-bottom: 12px;
+}
+
+.lead-info {
+  padding: 12px 14px;
+  margin: 12px 0;
+  gap: 18px;
+}
+
+.lead-editor {
+  gap: 10px;
+}
+
+.lead-editor label,
+.media-form label {
+  font-size: 11px;
+}
+
+.media-form input,
+.media-form select,
+.lead-editor input,
+.lead-editor select {
+  margin-top: 5px;
+}
+
+.media-grid {
+  gap: 12px;
+}
+
+.media-card img {
+  height: 140px;
+}
+
+.media-card > div {
+  padding: 12px;
+}
+
+.module-row {
+  padding: 14px 16px;
+  border-radius: 11px;
+}
+
+.module-row h3 {
+  font-size: 14px;
+}
+
+.setting-row {
+  padding: 12px 0;
+}
+
+.task-create-form {
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.task-create-form label {
+  gap: 5px;
+  font-size: 11px;
+}
+
+.task-create-form .task-form-grid {
+  gap: 10px;
+}
+
+.task-form-grid {
+  gap: 10px;
+}
+
+.blog-preview {
+  padding: 16px;
+  border-radius: 11px;
+  line-height: 1.65;
+}
+
+.empty {
+  padding: 28px;
+}
+
+/* Auth pages */
+.auth-card {
+  padding: 28px 30px;
+  border-radius: 16px;
+  gap: 10px;
+}
+
+.auth-symbol {
+  font-size: 36px;
+}
+
+.auth-card h1 {
+  font-size: 22px;
+}
+
+.auth-card input {
+  padding: 9px 11px;
+  margin-top: 6px;
+  font-size: 13px;
+}
+
+.auth-card .admin-btn {
+  margin-top: 8px;
+}
+
+.neon-auth-panel input {
+  padding: 8px 11px !important;
+  margin-top: 5px !important;
+  font-size: 13px !important;
+}
+
+.neon-hint {
+  margin: 6px 0 10px !important;
+}
+
+.auth-divider {
+  margin: 16px 0 !important;
+}
+
+@media (max-width: 1100px) {
+  .admin-content {
+    padding: 16px;
+  }
+
+  .admin-layout {
+    grid-template-columns: 176px 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .admin-top {
+    height: 56px;
+    padding: 8px 14px;
+  }
+
+  .admin-content {
+    padding: 14px;
+  }
+}
