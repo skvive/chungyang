@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>메인 배너 시안 A/B/C · 청양플러스</title>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+  <link rel="stylesheet" href="../static/css/style.css">
+  <link rel="stylesheet" href="../static/css/site-enhance.css">
+  <link rel="stylesheet" href="../static/css/site-density.css">
+  <style>
+    body { background: #eef3ef; padding: 32px 0 64px; }
+    .pick-header { max-width: 1220px; margin: 0 auto 28px; padding: 0 24px; }
+    .pick-header h1 { font-size: 22px; margin-bottom: 8px; }
+    .pick-header p { color: #677d74; font-size: 14px; margin: 0; }
+    .sian-block { max-width: 1220px; margin: 0 auto 48px; padding: 0 24px; }
+    .sian-label { display: flex; align-items: baseline; gap: 12px; margin-bottom: 12px; }
+    .sian-label strong { font-size: 18px; color: #075c44; }
+    .sian-label span { font-size: 13px; color: #677d74; }
+    .sian-frame { border-radius: 16px; overflow: hidden; box-shadow: 0 20px 50px rgba(9,47,41,.12); border: 1px solid #dae8dc; }
+    .sian-frame .hero { min-height: min(420px, 52vw); height: min(520px, 56vw); }
+    .sian-frame .hero-photo { background-size: cover; background-position: center 45%; }
+    .sian-a .hero-photo { background-image: url('hero-options/sian-a-minimal-dawn.jpg'); }
+    .sian-b .hero-photo { background-image: url('hero-options/sian-b-golden-view.jpg'); }
+    .sian-c .hero-photo { background-image: url('hero-options/sian-c-fresh-editorial.jpg'); }
+    .note { max-width: 1220px; margin: 24px auto 0; padding: 16px 24px; background: #fff; border-radius: 12px; font-size: 13px; color: #51675b; border: 1px solid #e5eee8; }
+  </style>
+</head>
+<body>
+  <div class="pick-header">
+    <h1>홈 메인 배너 — 시안 3종 (선택용)</h1>
+    <p>실제 사이트 히어로 레이아웃·카피를 그대로 올린 미리보기입니다. A/B/C 중 하나를 정해 주시면 <code>static/img/hero.webp</code>로 반영합니다.</p>
+  </div>
+
+  <div class="sian-block sian-a">
+    <div class="sian-label"><strong>시안 A</strong><span>미니멀 · 새벽 안개 · 여백 많음 · 프리미엄/차분</span></div>
+    <div class="sian-frame">
+      <section class="hero"><div class="hero-photo"></div><div class="hero-shade"></div><div class="container hero-inner"><div class="hero-copy"><span class="eyebrow">CHEONGYANG PLUS TRAVEL</span><p class="script">좋은 여행, 행복한 기억</p><h1>청양에서 출발하는<br><em>더 좋은 여행.</em></h1><p>한 사람의 여행도, 스무 명의 워크숍도.<br>여행 목적과 인원에 맞는 일정을 함께 설계합니다.</p><div class="hero-buttons"><a class="btn btn-gold btn-sm" href="#">단체여행 견적 문의</a><a class="btn btn-outline-light btn-sm" href="#">추천 여행 보기</a></div></div></div></section>
+    </div>
+  </div>
+
+  <div class="sian-block sian-b">
+    <div class="sian-label"><strong>시안 B</strong><span>골든아워 · 감성 · 따뜻한 톤 · 브랜드 스토리</span></div>
+    <div class="sian-frame">
+      <section class="hero"><div class="hero-photo"></div><div class="hero-shade"></div><div class="container hero-inner"><div class="hero-copy"><span class="eyebrow">CHEONGYANG PLUS TRAVEL</span><p class="script">좋은 여행, 행복한 기억</p><h1>청양에서 출발하는<br><em>더 좋은 여행.</em></h1><p>한 사람의 여행도, 스무 명의 워크숍도.<br>여행 목적과 인원에 맞는 일정을 함께 설계합니다.</p><div class="hero-buttons"><a class="btn btn-gold btn-sm" href="#">단체여행 견적 문의</a><a class="btn btn-outline-light btn-sm" href="#">추천 여행 보기</a></div></div></div></section>
+    </div>
+  </div>
+
+  <div class="sian-block sian-c">
+    <div class="sian-label"><strong>시안 C</strong><span>에디토리얼 · 밝음 · 단체·코치 노출 · 친근+신뢰</span></div>
+    <div class="sian-frame">
+      <section class="hero"><div class="hero-photo"></div><div class="hero-shade"></div><div class="container hero-inner"><div class="hero-copy"><span class="eyebrow">CHEONGYANG PLUS TRAVEL</span><p class="script">좋은 여행, 행복한 기억</p><h1>청양에서 출발하는<br><em>더 좋은 여행.</em></h1><p>한 사람의 여행도, 스무 명의 워크숍도.<br>여행 목적과 인원에 맞는 일정을 함께 설계합니다.</p><div class="hero-buttons"><a class="btn btn-gold btn-sm" href="#">단체여행 견적 문의</a><a class="btn btn-outline-light btn-sm" href="#">추천 여행 보기</a></div></div></div></section>
+    </div>
+  </div>
+
+  <p class="note">로컬 확인: 브라우저에서 <code>chungyang/design/hero-banner-sian.html</code> 열기 · 결정 시 채팅에 「A/B/C 적용」이라고 알려 주세요.</p>
+</body>
+</html>
