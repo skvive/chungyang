@@ -55,8 +55,12 @@ class _PgRow(Mapping):
 
     def __getitem__(self, key):
         if isinstance(key, int):
-            return self._values[key]
-        return self._values[self._names.index(key)]
+            val = self._values[key]
+        else:
+            val = self._values[self._names.index(key)]
+        if hasattr(val, "isoformat"):
+            return val.isoformat()
+        return val
 
     def __iter__(self):
         return iter(self._names)
