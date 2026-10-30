@@ -87,7 +87,8 @@ CREATE TABLE IF NOT EXISTS blogger_jobs(id INTEGER PRIMARY KEY,post_id INTEGER R
    c.execute("ALTER TABLE proposals ADD COLUMN lead_id INTEGER REFERENCES leads(id) ON DELETE SET NULL")
   modules=[('products','여행상품','여행상품과 5대 카테고리 노출'),('leads','견적·예약상담','공개 견적 접수 및 CRM 처리'),('posts','콘텐츠·게시판','공지사항·여행후기·여행이야기'),('proposals','여행제안서','제안서 작성과 인쇄'),('media','이미지 라이브러리','AI 홍보물 및 이미지 보관'),('analytics','방문·통계','방문 페이지뷰·상담 전환 집계'),('blogger','구글 Blogger','Blogger 임시글 전송 및 이력 관리'),('tasks','후속업무 관리','상담·견적 후속업무, 마감일과 담당자 추적')]
   c.executemany('INSERT OR IGNORE INTO module_registry(slug,name,summary) VALUES(?,?,?)',modules)
-  seeded=c.execute("SELECT value FROM settings WHERE key='system.initial_seed_done'").fetchone() or existed_before_boot
+  row=c.execute("SELECT value FROM settings WHERE key='system.initial_seed_done'").fetchone()
+  seeded=bool(row and str(row['value'])=='1')
   if not seeded and c.execute('SELECT COUNT(*) FROM products').fetchone()[0]==0:
    product_data=[
    ('제주 자연·문화 힐링 2박 3일','domestic','제주','2박 3일','제주의 자연과 문화를 둘러보고 단체의 일정에 맞춰 휴식과 교류를 설계합니다.','1일차 | 제주 도착 · 자연문화 탐방 · 숙소\n2일차 | 숲길 산책 · 문화마을 · 체험 활동\n3일차 | 해안 관광 · 지역 특산품 · 귀환','차량·숙박·식사·체험 항목은 협의 후 확정','개별 쇼핑, 개인 경비','/static/img/jeju.webp',1),
