@@ -1,0 +1,7 @@
+.neon-auth-panel label{display:block;font-size:13px;font-weight:700;margin:12px 0}
+.neon-auth-panel input{width:100%;padding:10px 12px;border:1px solid #d8e4dc;border-radius:9px;margin-top:6px}
+.neon-hint{font-size:12px;color:#63776a;margin:8px 0 12px}
+.neon-msg{font-size:12px;margin-top:10px;min-height:1.2em}
+.neon-msg.error{color:#b42318}
+.neon-msg.ok{color:#0c6344}
+.auth-divider{border:0;border-top:1px solid #e5eee8;margin:22px 0}

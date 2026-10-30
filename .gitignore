@@ -1,0 +1,13 @@
+# Cheongyang Plus — Vercel / Neon deploy
+
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+data/
+backups/
+.env
+.env.local
+.vercel/
+*.db
+*.sqlite

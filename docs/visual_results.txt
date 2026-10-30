@@ -1,0 +1,7 @@
+home_desktop visible H1= 청양에서 출발하는
+더 좋은 여행. horizontal_overflow= False script_errors= []
+home_mobile visible H1= 청양에서 출발하는
+더 좋은 여행. horizontal_overflow= False script_errors= []
+mobile_navigation_open= True
+admin_desktop visible H1= 운영 현황 대시보드 horizontal_overflow= False script_errors= []
+admin_mobile visible H1= 운영 현황 대시보드 horizontal_overflow= False script_errors= []

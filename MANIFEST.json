@@ -1,0 +1,445 @@
+{
+  "product": "Cheongyang Plus Travel / modular web platform",
+  "version": "1.0.0-beta",
+  "date": "2026-10-29",
+  "automated_tests": "7 pytest integration tests passed",
+  "visual_checks": "4 offline Chromium screens: no JS error / no horizontal overflow",
+  "excludes": "All runtime SQLite databases, session secrets, passwords, private credentials, public registrations screenshots",
+  "files": [
+    {
+      "path": ".env.example",
+      "size": 481,
+      "sha256": "56bd0e0456dde9a388b7d6635fbae14d93cef8b21837d233dc45aafe4cce4872"
+    },
+    {
+      "path": ".gitignore",
+      "size": 135,
+      "sha256": "2b312c3e402fae76a9302d1e4f83bed16f8230dde2f248c641da3afa185e7166"
+    },
+    {
+      "path": "README.md",
+      "size": 5126,
+      "sha256": "84912dd71a6de4e95bc0d678d81f4bc5e274fec6eca8f1467e305b82bd3d28cc"
+    },
+    {
+      "path": "app/__init__.py",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "app/blogger.py",
+      "size": 2080,
+      "sha256": "3e7573f9093cf37e16841f040a0c56ec2f05e99e758e74c60cc91140056e3522"
+    },
+    {
+      "path": "app/db.py",
+      "size": 11491,
+      "sha256": "8f2cb0e30a7a35bcc988168644c5e5415df4832f4773b05ffa4f361b4f54314a"
+    },
+    {
+      "path": "app/main.py",
+      "size": 27337,
+      "sha256": "89f61dd13a9a32cb07c2e86ebfe0a6fcc4241f4acad1e5102c4528a80c442a47"
+    },
+    {
+      "path": "app/security.py",
+      "size": 2078,
+      "sha256": "fcfccdf9e6f9dccbaa30339e22e5eba32462eb5a02dae30b79f22a31bd39e5fd"
+    },
+    {
+      "path": "blogger/README.md",
+      "size": 2094,
+      "sha256": "e6361b39e0aea5c7e35e2de1f2d6e21958eae3e8859ef8c7584fd1c1fd7cd69e"
+    },
+    {
+      "path": "blogger/posts/01_domestic.html",
+      "size": 815,
+      "sha256": "a17e051ff0e9a223d83ba1d74f048cd72e67aed84b395641631ca94f7d8f0d7c"
+    },
+    {
+      "path": "blogger/posts/02_benchmark.html",
+      "size": 811,
+      "sha256": "bc61d9264e513421469bdfdf237b9a0a851f487ce986efc615964433a1c2e189"
+    },
+    {
+      "path": "blogger/posts/03_outing.html",
+      "size": 701,
+      "sha256": "bd6c50ebb4883840fb14f5ed3ae549179e9c23e035ddc8f5a71585e503b9730b"
+    },
+    {
+      "path": "blogger/posts/04_workshop.html",
+      "size": 741,
+      "sha256": "5cb4f0baf61bcf3bb6962c92d639f2e55fbf8b0cdaebbb6d83a8057a40b089b4"
+    },
+    {
+      "path": "blogger/posts/05_family.html",
+      "size": 708,
+      "sha256": "2f3bc187e5c48003040c9df6ecc29b269e0110809e3ce77e4e4f66aeef805745"
+    },
+    {
+      "path": "blogger/theme.xml",
+      "size": 4100,
+      "sha256": "517570b0e7c31091071e5a4293863274d0f2c5518c8d66b00aea180d875ae29c"
+    },
+    {
+      "path": "data/.gitkeep",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/ARCHITECTURE.md",
+      "size": 4389,
+      "sha256": "97a3a665afff7ec1d0d2cf71b29f844a81377a8daf690c5eda1cbce40414f48b"
+    },
+    {
+      "path": "docs/MARKETING_COPY.md",
+      "size": 3502,
+      "sha256": "17df78062d034c5ab5bf337d0f915ef575018cd39a8b86519db00eced7c6a64d"
+    },
+    {
+      "path": "docs/OPERATIONS.md",
+      "size": 2876,
+      "sha256": "5197d4b492224e50b4f81c74c1038bf5ff7bfdae91bad124336ba957df5e1b1b"
+    },
+    {
+      "path": "docs/QA_REPORT.md",
+      "size": 3500,
+      "sha256": "297533bb2f847fa63e18d3111a31002e2d1a6f6756d8939bbdee02760e6bc9aa"
+    },
+    {
+      "path": "docs/screenshots/admin_desktop.png",
+      "size": 133833,
+      "sha256": "da738173a53427871d438042e3c14d32627d4ea14c110130a6c3f3c56930f690"
+    },
+    {
+      "path": "docs/screenshots/admin_mobile.png",
+      "size": 114171,
+      "sha256": "d589b9186dab7fbf0a5a725d0508685ce6958e2b093736cf777c31c548eb1b7a"
+    },
+    {
+      "path": "docs/screenshots/home_desktop.png",
+      "size": 2743972,
+      "sha256": "8023b91c8833e5d187b2f5ca5d5515fe218db3883fd0e1f43abc63460bcb3594"
+    },
+    {
+      "path": "docs/screenshots/home_mobile.png",
+      "size": 1419335,
+      "sha256": "54285cd01ed795716a554e5287b0bdfa78b8881a0bf52bfb17ba83f4cee38be6"
+    },
+    {
+      "path": "docs/test_results.txt",
+      "size": 98,
+      "sha256": "c1a0288eccdfde38d65c6aff62b8679281d772af106a322d7dd4220c67d1e88f"
+    },
+    {
+      "path": "docs/visual_results.txt",
+      "size": 453,
+      "sha256": "37d4ce833b80be0a4f2fe240ffaac563687b0e8190ed0ab9ce58a2a34d48f141"
+    },
+    {
+      "path": "marketing/instagram_square_1080x1080.webp",
+      "size": 306866,
+      "sha256": "61de0c2dde267cc59ec28c79e72efe5277c2d2ba322446a1fc376539b3f1ced5"
+    },
+    {
+      "path": "marketing/institution_flyer_1080x1350.webp",
+      "size": 365684,
+      "sha256": "d8e424c149e06c9782d7677fefb1840a8e264d8558babdf619ddbab5e975a3e2"
+    },
+    {
+      "path": "marketing/logo_square_600x600.webp",
+      "size": 42790,
+      "sha256": "a4765e75b9c4090ed3f04ee700654cdbc086c7b9194135b7d03e910823683192"
+    },
+    {
+      "path": "marketing/story_1080x1920.webp",
+      "size": 334108,
+      "sha256": "407aec6855ebc24f57e7cbdff75a2bdae66be7750b84a2e37a1d96ebeabb98d9"
+    },
+    {
+      "path": "marketing/youtube_channel_2560x1440.webp",
+      "size": 557278,
+      "sha256": "656f2c86a6ae43de3dccb2796fb4ed899b25ac270ebf6dc0c6e768926bb7859a"
+    },
+    {
+      "path": "marketing/youtube_thumbnail_1280x720.webp",
+      "size": 243150,
+      "sha256": "12ac0b2cd2f01d567d3e9627569f39391052181f77fbfa50a42195f7b55f1c2f"
+    },
+    {
+      "path": "proposals/01_domestic.html",
+      "size": 3153,
+      "sha256": "d9d6e953e6716b9ff517e170f4b41b04ab522b195e488d14a6edec1d7eff9f13"
+    },
+    {
+      "path": "proposals/02_benchmark.html",
+      "size": 3108,
+      "sha256": "3caffa2fc2926fb797d333b6ca360530e18136f20527f493fae3d1f655bd2069"
+    },
+    {
+      "path": "proposals/03_outing.html",
+      "size": 3050,
+      "sha256": "af25ea0f090e7a65b8592a82dc6a5a4e086ca10cbd698325842059d9fb0dcaf4"
+    },
+    {
+      "path": "proposals/04_workshop.html",
+      "size": 3083,
+      "sha256": "ec8f99c4cb5c7cb7ee5d7a9a053efce392a1acf505f2daa04127a1d02267f7ec"
+    },
+    {
+      "path": "proposals/05_family.html",
+      "size": 3044,
+      "sha256": "864f094c94e1b69c7ae230c4edd03eb93f6d78211850554ed242b8fabd15d2bc"
+    },
+    {
+      "path": "proposals/06_jeju-workshop.html",
+      "size": 3504,
+      "sha256": "8b5a541314572713b55ea78b1f0ff36dce12aeb6a4a506a7c5879c9f2f54c3a4"
+    },
+    {
+      "path": "requirements-dev.txt",
+      "size": 49,
+      "sha256": "c23feb58b6f9cab899b3e457b6cad56158f5315b366cd0f7a210feef72af395b"
+    },
+    {
+      "path": "requirements.txt",
+      "size": 132,
+      "sha256": "e08cb633797476dfd23e2c21c5b4abb455e8f0504b4d3717cf189a1bbef7e94e"
+    },
+    {
+      "path": "run.py",
+      "size": 276,
+      "sha256": "8ad0322106474d13d47f7dcaef8f46eb4cdf6ea4e5e385500c69c5d72c5f9ba3"
+    },
+    {
+      "path": "scripts/backup.py",
+      "size": 685,
+      "sha256": "b99260e8d776caee7b78613722f6d91f36286713b80b0a1621434f1ac703164f"
+    },
+    {
+      "path": "scripts/build_assets.py",
+      "size": 1847,
+      "sha256": "3ed61dee1e6b2903fe35941de6ecd685fee1e0883a2782ae8cf04883fd9dec92"
+    },
+    {
+      "path": "scripts/export_blogger_posts.py",
+      "size": 1049,
+      "sha256": "bd961ddcd8e47e41cb61179f202e619a237ed1ebd1f2df9258f9dca9ccece0f2"
+    },
+    {
+      "path": "scripts/render_visual_check.py",
+      "size": 3110,
+      "sha256": "d4d98e70032ba1a38c77cffef7ce04947e4d8b35c245534e6bc159c00dd26fd2"
+    },
+    {
+      "path": "start_linux_mac.sh",
+      "size": 148,
+      "sha256": "0a64e09e36db1743a947bf282126025bab286b9f7e4ddf10c6c3936639d8d09d"
+    },
+    {
+      "path": "start_windows.bat",
+      "size": 1047,
+      "sha256": "b6544e8646f07a14f2ef04c43ea6ff835e5be3264448f2199b61f47128a479f8"
+    },
+    {
+      "path": "static/css/admin.css",
+      "size": 10035,
+      "sha256": "da3688bd16845011bc0b9ff2ce3f5e618a6ad949feccab3134b4d5bde30b78b5"
+    },
+    {
+      "path": "static/css/style.css",
+      "size": 14053,
+      "sha256": "4ec346b6fabe69b1663ed1d2e615eb2a5ea63c3bb42dd5e5e4c455e74939cae7"
+    },
+    {
+      "path": "static/img/brand-logo.webp",
+      "size": 85814,
+      "sha256": "6f3c070a61f8483e4728da013dee224dbe2ecd9a2294abe5b3e45ca0779f6bfd"
+    },
+    {
+      "path": "static/img/domestic.webp",
+      "size": 56468,
+      "sha256": "6bd54124a26dbab0b456c45cba0a5b06e200f7f2b9ed03f33c4c1850f50fd29a"
+    },
+    {
+      "path": "static/img/family.webp",
+      "size": 21996,
+      "sha256": "51154a86aa18843aa045cde9b8e5b082677bfc17ce0642a7fb135153514f5c90"
+    },
+    {
+      "path": "static/img/group.webp",
+      "size": 54306,
+      "sha256": "64dfb34a501437060c9957a136cdc3d680992c9848eed424547c3fe064ba52ee"
+    },
+    {
+      "path": "static/img/hero.webp",
+      "size": 201208,
+      "sha256": "5d50a8fff1bca5b73006cd538bad8e613b0fef5c06cf469217ad9ac0d447afe8"
+    },
+    {
+      "path": "static/img/institution-promo.webp",
+      "size": 296196,
+      "sha256": "4527a496a3864233ca20f189375a9690e6b87d4a62da065d1ab831d4a5d7be21"
+    },
+    {
+      "path": "static/img/jeju-proposal.webp",
+      "size": 247766,
+      "sha256": "3e0ff1edb4cc6f5c90450bb431aec1ecc4b5a974c83c27ae56e07d88dbf71798"
+    },
+    {
+      "path": "static/img/jeju.webp",
+      "size": 29138,
+      "sha256": "43360720220f7401655cd9fc9845522dac43f8bc5cdb5626e8c8bb3b22a448bc"
+    },
+    {
+      "path": "static/img/outing.webp",
+      "size": 47372,
+      "sha256": "6d5ac3ecf22cbed5ae061a1476588e497d86f6f9c6fc72db1870f5d2e83f802c"
+    },
+    {
+      "path": "static/img/social-promo.webp",
+      "size": 284134,
+      "sha256": "ab7353bba7920d46b95bf6ed4797db00d56f3e10dc81d9710ea2498106c57b37"
+    },
+    {
+      "path": "static/img/workshop.webp",
+      "size": 56468,
+      "sha256": "6bd54124a26dbab0b456c45cba0a5b06e200f7f2b9ed03f33c4c1850f50fd29a"
+    },
+    {
+      "path": "static/img/youtube-banner.webp",
+      "size": 258120,
+      "sha256": "d89dab983f251de0318918e36e4ff08108f84728404eff594027ab5bae0cac00"
+    },
+    {
+      "path": "static/js/site.js",
+      "size": 814,
+      "sha256": "255250ab80a0f1387e72671c29afae472a5243d05faed078a1bdec86c8a5d153"
+    },
+    {
+      "path": "templates/about.html",
+      "size": 1367,
+      "sha256": "62dd1de749c39df480a4af9f9b2733945fcfc4203e685c54834bd838fa9b97c0"
+    },
+    {
+      "path": "templates/admin_analytics.html",
+      "size": 1337,
+      "sha256": "1f83e660f6fa31f56c74081dfa9d63c70490822655cccb13e0d24ee056517671"
+    },
+    {
+      "path": "templates/admin_audit.html",
+      "size": 652,
+      "sha256": "1d47bd2be0f8b4886883c968a2d0e187f63896b5f428a667fa86cb8567e5af0c"
+    },
+    {
+      "path": "templates/admin_base.html",
+      "size": 2653,
+      "sha256": "9809b6e03da3ebe2e56ca425f4104722089484d482ca0891db795906c3fbf8f9"
+    },
+    {
+      "path": "templates/admin_blogger.html",
+      "size": 1646,
+      "sha256": "9999246f0df5c69286f4edf03faec5dc23ee6bfffb4156ab03b534c4c30ff847"
+    },
+    {
+      "path": "templates/admin_form.html",
+      "size": 2924,
+      "sha256": "8a88053466a51ed4539587ad57632722512570b6ceee1ab0d1715c08493f4d2f"
+    },
+    {
+      "path": "templates/admin_leads.html",
+      "size": 2773,
+      "sha256": "3c0a70201725ce74604f0e86fda4f3d333508bd2b06bcfdf306be4649e7cb27b"
+    },
+    {
+      "path": "templates/admin_list.html",
+      "size": 1698,
+      "sha256": "45d3d436c14687571a6f883d9c135b55a2e32b2110dad226460850019fa5aaf9"
+    },
+    {
+      "path": "templates/admin_media.html",
+      "size": 1565,
+      "sha256": "582e0b680045016adf5124c1bf1b56d2e25bd309d8f6dbc72303246c6ba1d4cc"
+    },
+    {
+      "path": "templates/admin_modules.html",
+      "size": 1312,
+      "sha256": "ccbbbd4afa732e62a7e815a1bee6e2d1f9dcbe031eda2e57800d7bc25cd163ac"
+    },
+    {
+      "path": "templates/admin_settings.html",
+      "size": 2033,
+      "sha256": "0e6b983dcc0a1c39a58ed5f1e9c15c2b99ff773f849133305730bc5c3775b4cd"
+    },
+    {
+      "path": "templates/admin_users.html",
+      "size": 1612,
+      "sha256": "276c0ff061d9e63373b78857257eced6707d7bc73e175c8d9a12366c76e1cd45"
+    },
+    {
+      "path": "templates/base.html",
+      "size": 2782,
+      "sha256": "5125e4f737eb772bc2748d3a9a05a49111bb9920fa7abfca0fbe91b7f2a98543"
+    },
+    {
+      "path": "templates/board.html",
+      "size": 1156,
+      "sha256": "675c45e2e406e71d8a727d8f94d38e58d40da493e929f59813cfc98ad4176573"
+    },
+    {
+      "path": "templates/board_item.html",
+      "size": 643,
+      "sha256": "26e49a1aa00c24ef33b5676b997f537e821e94643d0ed5640f471a0fd2e42f03"
+    },
+    {
+      "path": "templates/contact.html",
+      "size": 2697,
+      "sha256": "8b4b3803efe92fceecb38eaa1209edb3d20c9ac2f7d9b9002e524c7d276561a1"
+    },
+    {
+      "path": "templates/dashboard.html",
+      "size": 3222,
+      "sha256": "ad2cf1cd7df20581cb4afeb0240fb0492987df8c8abaaa1c26e3b6f0c98d7261"
+    },
+    {
+      "path": "templates/home.html",
+      "size": 4881,
+      "sha256": "b3067921771d921f2ff8f4a2049caea4b656818d5ff936167e9b6feb846adcc9"
+    },
+    {
+      "path": "templates/login.html",
+      "size": 896,
+      "sha256": "59185cfb681dc7ed16de06a3766fdf7147cbfb909695a268945c621f9017afa6"
+    },
+    {
+      "path": "templates/proposal_print.html",
+      "size": 2778,
+      "sha256": "593d1df292ece5a902d7faea00663dfecc8f35f8a321ab7a4614eeb07fca219c"
+    },
+    {
+      "path": "templates/service.html",
+      "size": 1473,
+      "sha256": "4666ba11c45b2d5f6aa4881138f2a64b8c071ff2a1305171b80ae9a48e4abd3f"
+    },
+    {
+      "path": "templates/setup.html",
+      "size": 934,
+      "sha256": "7b44bd0b6b2eb6f87bd7a4a28fd380f20554fe63960932da1c5607af92ddb127"
+    },
+    {
+      "path": "templates/tour.html",
+      "size": 1383,
+      "sha256": "954521c8983e644c8f9d011669dd835ba9152eb9ae5fe343627c03b61ab1f2ec"
+    },
+    {
+      "path": "templates/tours.html",
+      "size": 1264,
+      "sha256": "e81c7683b1be45ec0d7aa40069f5b66f82bd358e0197d3d2f4205bb0bc16d332"
+    },
+    {
+      "path": "tests/test_integration.py",
+      "size": 11451,
+      "sha256": "ed0617cf09a7cbb4e322eacec49753d37385fba4c4860b644e24ceb0d55eb1f3"
+    }
+  ]
+}

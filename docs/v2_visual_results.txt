@@ -1,0 +1,8 @@
+tasks/pc h1=후속업무 · 마감일 overflow=False JS_errors=[]
+tasks/mobile h1=후속업무 · 마감일 overflow=False JS_errors=[]
+settings/pc h1=회사 정보 · 연결 설정 overflow=False JS_errors=[]
+settings/mobile h1=회사 정보 · 연결 설정 overflow=False JS_errors=[]
+blogger_preview/pc h1=Blogger 임시글 HTML 미리보기 overflow=False JS_errors=[]
+blogger_preview/mobile h1=Blogger 임시글 HTML 미리보기 overflow=False JS_errors=[]
+privacy/pc h1=개인정보 처리 안내 overflow=False JS_errors=[]
+privacy/mobile h1=개인정보 처리 안내 overflow=False JS_errors=[]
