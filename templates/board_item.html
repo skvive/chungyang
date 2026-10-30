@@ -1,1 +1,9 @@
-{% extends 'base.html' %}{% block title %}{{p.title}} | 청양플러스{% endblock %}{% block content %}<section class="page-hero page-hero--board"><div class="container"><h1>청양플러스 게시판</h1><p>좋은 여행, 행복한 기억</p></div></section><section class="section"><article class="container narrow article"><div class="label-title">{{p.kind|upper}} · {{p.created_at[:10]}}</div><h1>{{p.title}}</h1>{% if p.image %}<img class="article-image" src="{{p.image}}" alt="{{p.title}}">{% endif %}<div class="lines article-body">{{p.body}}</div><a class="btn btn-line" href="/board/{{p.kind}}">목록으로 →</a></article></section>{% endblock %}
+{% extends 'base.html' %}{% set names={'notice':'공지사항','review':'여행후기','story':'여행이야기'} %}{% block title %}{{p.title}} | 청양플러스{% endblock %}{% block content %}
+<section class="article-page"><article class="container narrow">
+<nav class="breadcrumb" aria-label="현재 위치"><a href="/board/{{p.kind}}">{{names[p.kind]}}</a><span aria-hidden="true">/</span><span class="current" aria-current="page">{{p.title}}</span></nav>
+<div class="article-head"><div class="label-title">{{names[p.kind]}} · {{p.created_at[:10]}}</div><h1>{{p.title}}</h1></div>
+{% if p.image %}<img class="article-image" src="{{p.image}}" alt="">{% endif %}
+<div class="lines article-body">{{p.body}}</div>
+<a class="btn btn-line btn-sm" href="/board/{{p.kind}}">목록으로</a>
+</article></section>
+{% endblock %}
