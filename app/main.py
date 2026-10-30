@@ -24,6 +24,7 @@ if (ROOT/'auth').is_dir():
 tpl=Jinja2Templates(directory=str(ROOT/'templates'))
 
 COMPANY={"brand":"청양플러스 여행사","legal":"청양플러스","representative":"곽태근","phone":"010-3742-2684","email":"taegeuni@naver.com","address":"충청남도 청양군 운곡면 청신로 583","registration":"제2025-000001호","tagline":"좋은 여행, 행복한 기억"}
+CATEGORY_IMAGES={'domestic':'/static/img/domestic.webp','benchmark':'/static/img/benchmark.webp','outing':'/static/img/outing.webp','workshop':'/static/img/workshop.webp','family':'/static/img/family.webp'}
 FIELDS={
  'products': [('title','상품명','text'),('category','사업분야','category'),('region','여행지역','text'),('days','여행기간','text'),('description','상품소개','textarea'),('itinerary','예시 일정(줄바꿈)','textarea'),('inclusions','포함항목','textarea'),('exclusions','불포함·유의사항','textarea'),('price_note','가격 안내','text'),('image','이미지 경로','text'),('status','노출상태','visibility'),('featured','추천상품','bool')],
  'posts': [('title','제목','text'),('kind','게시판 종류','kind'),('body','내용','textarea'),('image','대표이미지 경로','text'),('status','상태','visibility'),('author','작성자','text')],
@@ -49,7 +50,22 @@ def require_module(slug):
  if not module_enabled(slug):raise HTTPException(503,'해당 서비스는 운영자에 의해 일시 중지되었습니다.')
 
 def site_context(req,**kwargs):
- return dict(request=req,company=get_company(),categories=db.CATEGORIES,csrf=token(req),user=req.session.get('user'),labels=LABELS,**kwargs)
+ return dict(request=req,company=get_company(),categories=db.CATEGORIES,category_images=CATEGORY_IMAGES,csrf=token(req),user=req.session.get('user'),labels=LABELS,**kwargs)
+
+def featured_products(limit=6):
+ sql="""SELECT p.* FROM products p
+ INNER JOIN (SELECT title, MAX(id) AS mid FROM products WHERE status='published' GROUP BY title) u ON p.id=u.mid
+ ORDER BY p.featured DESC, p.id DESC LIMIT ?"""
+ return db.all(sql,(limit,))
+
+def list_products(category=''):
+ if category in db.CATEGORIES:
+  return db.all("""SELECT p.* FROM products p
+ INNER JOIN (SELECT title, MAX(id) AS mid FROM products WHERE status='published' AND category=? GROUP BY title) u ON p.id=u.mid
+ ORDER BY p.featured DESC, p.id DESC""",(category,))
+ return db.all("""SELECT p.* FROM products p
+ INNER JOIN (SELECT title, MAX(id) AS mid FROM products WHERE status='published' GROUP BY title) u ON p.id=u.mid
+ ORDER BY p.featured DESC, p.id DESC""")
 
 def render(req,name,**kwargs):return tpl.TemplateResponse(req,name,site_context(req,**kwargs))
 def redirect(url):return RedirectResponse(url,status_code=303)
@@ -87,12 +103,12 @@ async def pageviews(req,call_next):
  response.headers['X-Content-Type-Options']='nosniff'
  response.headers['Referrer-Policy']='strict-origin-when-cross-origin'
  response.headers['X-Frame-Options']='SAMEORIGIN'
- response.headers['Content-Security-Policy']="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'self'"
+ response.headers['Content-Security-Policy']="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; font-src 'self' https://cdn.jsdelivr.net; script-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'self'"
  return response
 
 @app.get('/',response_class=HTMLResponse)
 def home(req:Request):
- products=db.all("SELECT * FROM products WHERE status='published' ORDER BY featured DESC,id DESC LIMIT 6") if module_enabled('products') else []
+ products=featured_products(6) if module_enabled('products') else []
  posts=db.all("SELECT * FROM posts WHERE status='published' AND kind='notice' ORDER BY id DESC LIMIT 3") if module_enabled('posts') else []
  return render(req,'home.html',products=products,posts=posts)
 
@@ -100,13 +116,13 @@ def home(req:Request):
 def service(req:Request,category:str):
  require_module('products')
  if category not in db.CATEGORIES:raise HTTPException(404)
- products=db.all("SELECT * FROM products WHERE category=? AND status='published' ORDER BY id DESC",(category,))
+ products=list_products(category)
  return render(req,'service.html',cat=category,category=db.CATEGORIES[category],products=products)
 
 @app.get('/tours',response_class=HTMLResponse)
 def tours(req:Request,category:str=''):
  require_module('products')
- products=db.all('SELECT * FROM products WHERE status=? AND category=? ORDER BY id DESC',('published',category)) if category in db.CATEGORIES else db.all("SELECT * FROM products WHERE status='published' ORDER BY featured DESC,id DESC")
+ products=list_products(category)
  return render(req,'tours.html',products=products,selected_category=category)
 
 @app.get('/tours/{id}',response_class=HTMLResponse)

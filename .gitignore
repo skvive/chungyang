@@ -11,3 +11,6 @@ backups/
 .vercel/
 *.db
 *.sqlite
+
+.vercel
+.env*
