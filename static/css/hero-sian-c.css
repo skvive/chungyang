@@ -1,0 +1,145 @@
+/**
+ * 시안 C — 프로덕션 홈 히어로 (hero.webp = sian-c-fresh-editorial)
+ */
+.hero-sian-c .hero-photo {
+  background-position: 62% center;
+  opacity: 1;
+}
+
+.hero-sian-c .hero-shade {
+  background: linear-gradient(
+    105deg,
+    rgba(2, 43, 34, 0.94) 0%,
+    rgba(3, 50, 41, 0.82) 38%,
+    rgba(6, 55, 38, 0.35) 68%,
+    rgba(2, 34, 30, 0.12) 100%
+  );
+}
+
+.hero-sian-c .hero-inner {
+  align-items: center;
+  padding-top: 8px;
+  padding-bottom: 28px;
+}
+
+.hero-brand-lockup {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+.hero-brand-lockup img {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  object-fit: cover;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.25);
+  border: 2px solid rgba(255, 255, 255, 0.35);
+}
+
+.hero-brand-lockup div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.hero-brand-lockup .name-ko {
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: #fff;
+}
+
+.hero-brand-lockup .name-ko em {
+  font-style: normal;
+  color: #d0ee7f;
+  font-weight: 900;
+}
+
+.hero-brand-lockup .name-en {
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  color: #a4e2c3;
+  font-weight: 700;
+}
+
+.hero-sian-c .hero-copy {
+  max-width: 520px;
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.35);
+}
+
+.hero-sian-c .eyebrow {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  margin-bottom: 4px;
+}
+
+.hero-sian-c .script {
+  font-size: clamp(18px, 2.2vw, 22px);
+  margin: 12px 0 10px;
+}
+
+.hero-sian-c .hero-copy > p:not(.script) {
+  font-size: clamp(15px, 1.6vw, 17px);
+  line-height: 1.75;
+  max-width: 28em;
+}
+
+.hero-trust {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  margin-top: 18px;
+  font-size: 11px;
+  color: #c5e8d4;
+  font-weight: 650;
+}
+
+.hero-trust span::before {
+  content: "·";
+  margin-right: 8px;
+  opacity: 0.5;
+}
+
+.hero-trust span:first-child::before {
+  content: none;
+  margin: 0;
+}
+
+.hero-sian-c .hero-badge {
+  margin-bottom: 48px;
+  backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.88);
+  border-color: rgba(255, 255, 255, 0.55);
+}
+
+.hero-sian-c .hero-pills {
+  margin-top: 20px;
+  gap: 14px 18px;
+}
+
+@media (max-width: 900px) {
+  .hero-sian-c .hero-photo {
+    background-position: 70% center;
+  }
+}
+
+@media (max-width: 550px) {
+  .hero-brand-lockup img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .hero-sian-c .hero-shade {
+    background: linear-gradient(
+      180deg,
+      rgba(2, 43, 34, 0.92) 0%,
+      rgba(3, 50, 41, 0.75) 55%,
+      rgba(6, 55, 38, 0.4) 100%
+    );
+  }
+}

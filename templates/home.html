@@ -1,5 +1,37 @@
 {% extends 'base.html' %}{% block content %}
-<section class="hero"><div class="hero-photo"></div><div class="hero-shade"></div><div class="container hero-inner"><div class="hero-copy"><span class="eyebrow">CHEONGYANG PLUS TRAVEL</span><p class="script">좋은 여행, 행복한 기억</p><h1>청양에서 출발하는<br><em>더 좋은 여행.</em></h1><p>한 사람의 여행도, 스무 명의 워크숍도.<br>여행 목적과 인원에 맞는 일정을 함께 설계합니다.</p><div class="hero-buttons"><a class="btn btn-gold btn-sm" href="/contact">단체여행 견적 문의 <span>↗</span></a><a class="btn btn-outline-light btn-sm" href="/tours">추천 여행 보기</a></div><div class="hero-pills"><span>✓ 청양 출발 상담</span><span>✓ 기관·단체 맞춤</span><span>✓ 일정·동선 기획</span></div></div><div class="hero-badge"><strong>5</strong><span>여행 서비스<br>맞춤형 상담</span></div></div></section>
+<section class="hero hero-sian-c">
+  <div class="hero-photo"></div>
+  <div class="hero-shade"></div>
+  <div class="container hero-inner">
+    <div class="hero-copy">
+      <div class="hero-brand-lockup">
+        <img src="/static/img/brand-logo.webp" alt="청양플러스 여행사" width="56" height="56">
+        <div>
+          <span class="name-en">CHEONGYANG PLUS TRAVEL</span>
+          <span class="name-ko"><em>청양플러스</em> 여행사</span>
+        </div>
+      </div>
+      <span class="eyebrow">충청남도 청양 · 국내여행업 등록</span>
+      <p class="script">좋은 여행, 행복한 기억</p>
+      <h1>청양에서 출발하는<br><em>더 좋은 여행.</em></h1>
+      <p>한 사람의 여행도, 스무 명의 워크숍도.<br>여행 목적과 인원에 맞는 일정을 함께 설계합니다.</p>
+      <div class="hero-buttons">
+        <a class="btn btn-gold btn-sm" href="/contact">단체여행 견적 문의 <span>↗</span></a>
+        <a class="btn btn-outline-light btn-sm" href="/tours">추천 여행 보기</a>
+      </div>
+      <div class="hero-pills">
+        <span>✓ 청양 출발 상담</span>
+        <span>✓ 기관·단체 맞춤</span>
+        <span>✓ 일정·동선 기획</span>
+      </div>
+      <div class="hero-trust">
+        <span>국내여행 · 선진지견학 · 나들이 · 워크숍 · 가족여행</span>
+        <span>맞춤 견적 · 전화 {{ company.phone }}</span>
+      </div>
+    </div>
+    <div class="hero-badge"><strong>5</strong><span>여행 서비스<br>맞춤형 상담</span></div>
+  </div>
+</section>
 <section class="section section-white"><div class="container"><div class="section-head"><div><span class="kicker">OUR SERVICES</span><h2>원하시는 여행, <em>맞춤으로</em> 준비합니다.</h2><p>출발 목적부터 즐거운 귀가까지, 청양플러스가 함께합니다.</p></div><a class="inline-link" href="/tours">전체 여행상품 ↗</a></div><div class="services-grid">
 {% for key,cat in categories.items() %}<a class="service-tile service-tile--{{key}}" href="/services/{{key}}"><div class="service-icon {% if key=='workshop' %}blue{% elif key=='family' %}pink{% elif key=='benchmark' %}teal{% elif key=='outing' %}amber{% endif %}">{% if key=='domestic' %}⛰{% elif key=='benchmark' %}▣{% elif key=='outing' %}🌿{% elif key=='workshop' %}◈{% else %}♡{% endif %}</div><h3>{{cat[0]}}</h3><p>{{cat[1]}}</p><span>자세히 보기 ↗</span></a>{% endfor %}
 </div></div></section>
